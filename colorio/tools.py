@@ -443,7 +443,7 @@ def show_macadam(scaling=1,
             return numpy.array([
                 + 2*sa*sa * a,
                 + 2*sb*sb * b,
-                + 2*sa*sb * (b*b - a*a),
+                + 2*sa*sb * (b - a)*(b + a),
                 ]).T
 
         (a, b, theta), _ = leastsq(f_ellipse, [1.0, 1.0, 0.0], Dfun=jac)
